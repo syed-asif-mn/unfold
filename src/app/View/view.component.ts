@@ -23,7 +23,6 @@ export class ViewComponent {
   }
 
   changeLanguage(index: number) {
-    
     this.translateService.use(this.managerService.codes[index]);
   }
 
@@ -63,7 +62,9 @@ export class ViewComponent {
     if (!this.registrationForm.valid) {
       false;
     } else {
-      alert(`Download files for project: ${this.projectName}?`);
+      alert(
+        `Downloading files for project: ${JSON.stringify(this.projectName)}?`
+      );
+    }
   }
-}
 }
