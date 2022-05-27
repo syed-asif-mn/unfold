@@ -63,7 +63,7 @@ export class ViewComponent {
       false;
     } else {
       alert(
-        `Downloading files for project: ${JSON.stringify(this.projectName)}?`
+        `Downloading files for project: ${JSON.stringify(this.projectName.value)}?`
       );
     }
   }
