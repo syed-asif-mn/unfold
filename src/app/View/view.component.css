@@ -1,0 +1,109 @@
+.container {
+  padding: 2rem;
+  text-justify: inter-cluster;
+}
+
+h1 {
+  color: var(--text-dark);
+  font-weight: var(--weight-bold);
+  font-size: 32px;
+  margin-top: 0px;
+  margin-bottom: 16px;
+}
+
+.languageBar {
+  display: grid;
+  text-align: center;
+  justify-content: space-around;
+  padding-left: 1rem;
+}
+
+.languageButton {
+  color: gray;
+  margin-top: -0.25rem;
+  cursor: pointer;
+}
+
+.languageButton:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+}
+
+.formData {
+  display: flex;
+}
+
+.formInternalGroup {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+select {
+  align-self: center;
+  width: fit-content;
+  justify-content: flex-start;
+  padding: 0.5rem 2rem;
+  border: 0.1rem solid rgb(145, 144, 144);
+  border-radius: 0.25rem;
+  appearance: none;
+}
+
+.invalid {
+  padding: 0.3rem;
+  font-size: small;
+  color: red;
+}
+
+.svg {
+  width: 20rem;
+  height: 20rem;
+  margin-bottom: -5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formFooter {
+  padding: 0 1rem;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.Inputcontrol {
+  padding: 0.5rem;
+  border: 0.1rem solid rgb(145, 144, 144);
+  border-radius: 0.25rem;
+}
+
+.submit {
+  outline: none;
+  margin: 0 2rem;
+  padding: 0.5rem 1rem;
+  border: 0.1rem solid rgb(145, 144, 144);
+  border-radius: 0.25rem;
+  background-color: rgb(120, 120, 247);
+  color: white;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .languageBar {
+    grid-template-columns: repeat(3, 50px);
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .languageBar {
+    grid-template-columns: repeat(6, 50px);
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .languageBar {
+    grid-template-columns: repeat(12, 50px);
+  }
+}
