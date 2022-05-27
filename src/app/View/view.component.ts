@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
-import { CommunicationService } from '../Communication/communication.service';
 import { ManagerService } from '../Manager/manager.service';
 
 @Component({
@@ -16,8 +15,7 @@ export class ViewComponent {
   constructor(
     public fb: FormBuilder,
     private translateService: TranslateService,
-    public managerService: ManagerService,
-    public communicationService: CommunicationService
+    public managerService: ManagerService
   ) {
     this.translateService.use('en');
   }
@@ -62,6 +60,7 @@ export class ViewComponent {
     if (!this.registrationForm.valid) {
       false;
     } else {
+      this.managerService.downloadData(this.projectName.value, this.serverName.value, this.clientName.value)
       alert(
         `Downloading files for project: ${JSON.stringify(this.projectName.value)}?`
       );

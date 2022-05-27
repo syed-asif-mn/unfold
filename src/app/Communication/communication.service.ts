@@ -26,20 +26,14 @@ export class CommunicationService {
 
     xhr.send();
   }
-  downloadData() {
-    var data = JSON.stringify({
-      serverFramework: 1,
-      clientFramework: 2,
-      projectName: 'airbus_test1',
-    });
-
+  downloadData(data: string) {
     var xhr = new XMLHttpRequest();
     xhr.withCredentials = true;
 
     xhr.addEventListener('readystatechange', function () {
       if (this.readyState === 4) {
         var blob = new Blob([data], { type: 'application/x-tar' });
-        FileSaver.saveAs(blob, 'report.tgz');
+        FileSaver.saveAs(blob, 'code.zip');
       }
     });
 
