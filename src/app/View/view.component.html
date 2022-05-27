@@ -402,14 +402,15 @@
       
     </div>
     <div class="formFooter">
-      <div class="footerText" translate>projectName</div>
+      <div class="footerText" translate>projectName<span>:</span></div>
       <div class="footerSpace"><pre>   </pre></div>
       <p>
         <input
+        translate
           type="text"
           class="Inputcontrol"
           formControlName="projectName"
-          placeholder="{{projectName | translate}}"
+          placeholder="{{'projectName' | translate}}"
         />
       </p>
       <h1>{{ project }}</h1>
