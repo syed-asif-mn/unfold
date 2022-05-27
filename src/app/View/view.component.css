@@ -114,12 +114,12 @@ select {
   .footerSpace {
     display: none;
   }
-  .Inputcontrol::placeholder {
-    content: 'Enter the Title';
-  }
 }
 
 @media only screen and (min-width: 600px) {
+  .Inputcontrol::placeholder {
+    color: white;
+  }
   .languageBar {
     grid-template-columns: repeat(12, 50px);
   }
