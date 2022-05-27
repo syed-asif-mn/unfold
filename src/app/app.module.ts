@@ -6,13 +6,14 @@ import { ViewComponent } from './View/view.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { ManagerComponent } from './Manager/manager.component';
 
 export function rootLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
-  }
+}
 
 @NgModule({
-  declarations: [AppComponent, ViewComponent],
+  declarations: [AppComponent, ViewComponent, ManagerComponent],
   imports: [
     HttpClientModule,
     BrowserModule,
