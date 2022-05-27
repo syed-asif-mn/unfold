@@ -77,7 +77,7 @@ export class ViewComponent {
         }
         });
         
-        xhr.open("POST", "http://d3d3-2409-4055-1-34f9-442-90-f1fd-74a7.ngrok.io/api/v1/list");
+        xhr.open("GET", "http://d3d3-2409-4055-1-34f9-442-90-f1fd-74a7.ngrok.io/api/v1/list");
         xhr.setRequestHeader("Content-Type", "application/json");
         xhr.setRequestHeader("Cookie", "csrftoken=Ekkns2E4gRIgZ7yBCJadRbdlMyLimPXU02U1HVE8hRU61q996yILmZvDSQJJbUr7");
         
