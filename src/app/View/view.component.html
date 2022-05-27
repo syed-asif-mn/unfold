@@ -13,7 +13,7 @@
   <p translate>line5</p>
 
   <div class="languageBar">
-    <div *ngFor="let language of languages; let languageIndex = index">
+    <div *ngFor="let language of this.managerService.languages; let languageIndex = index">
       <p class="languageButton" (click)="changeLanguage(languageIndex)">
         {{ language }}
       </p>
@@ -174,7 +174,7 @@
             selectServer
           </option>
           <option
-            *ngFor="let framework of serverFrameworks"
+            *ngFor="let framework of this.managerService.serverFrameworks"
             [ngValue]="framework"
           >
             {{ framework }}
@@ -388,7 +388,7 @@
               selectClient
             </option>
             <option
-              *ngFor="let framework of clientFrameworks"
+              *ngFor="let framework of this.managerService.clientFrameworks"
               [ngValue]="framework"
             >
               {{ framework }}

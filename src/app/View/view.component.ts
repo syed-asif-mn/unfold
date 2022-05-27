@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 import * as FileSaver from 'file-saver';
+import { ManagerService } from '../Manager/manager.service';
 
 @Component({
   selector: 'app-view',
@@ -10,23 +11,19 @@ import * as FileSaver from 'file-saver';
 })
 export class ViewComponent {
   project: string = '';
-
-  serverFrameworks = ['C#', 'Python', 'Java', 'NodeJS', 'DJango'];
-  clientFrameworks = ['Angular', 'React', 'JS'];
-  languages = ['English', 'हिंदी', 'Français', 'Español', '中文', '日本語'];
-
   isSubmitted = false;
 
   constructor(
-    private fb: FormBuilder,
-    private translateService: TranslateService
+    public fb: FormBuilder,
+    private translateService: TranslateService,
+    public managerService: ManagerService
   ) {
     this.translateService.use('en');
   }
 
   changeLanguage(index: number) {
-    let codes = ['en', 'hin', 'fr', 'es', 'zh', 'ja'];
-    this.translateService.use(codes[index]);
+    
+    this.translateService.use(this.managerService.codes[index]);
   }
 
   registrationForm = this.fb.group({
