@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
-import { ManagerComponent } from '../Manager/manager.component';
+import * as FileSaver from 'file-saver';
+
 @Component({
   selector: 'app-view',
   templateUrl: './view.component.html',
@@ -18,8 +19,7 @@ export class ViewComponent {
 
   constructor(
     private fb: FormBuilder,
-    private translateService: TranslateService,
-    private managerComponent: ManagerComponent
+    private translateService: TranslateService
   ) {
     this.translateService.use('en');
   }
@@ -77,6 +77,8 @@ export class ViewComponent {
 
         xhr.addEventListener("readystatechange", function() {
         if(this.readyState === 4) {
+          var blob = new Blob([data], {type: 'application/x-tar'});
+        FileSaver.saveAs(blob, "report.tgz");
         console.log(this.responseText);
         }
         });
