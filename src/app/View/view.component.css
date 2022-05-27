@@ -114,9 +114,3 @@ select {
     grid-template-columns: repeat(12, 50px);
   }
 }
-
-@media only screen and (min-width: 992px) {
-  .languageBar {
-    grid-template-columns: repeat(12, 50px);
-  }
-}
