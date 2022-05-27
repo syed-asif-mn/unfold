@@ -1,30 +1,30 @@
 {
-  "title":"unFold",
+  "title":"繰り広げる",
   
   "team": "\\ te·am ˌin·​vin·​ci·​ble",
 
-  "line1": "1. Open-source full-stack",
+  "line1": "1. オープンソースのフルスタック",
 
-  "line2": "code generator ",
+  "line2": "コードジェネレータ ",
 
-  "line3": "for any idea you can imagine and create.",
+  "line3": "どんなアイデアでも、あなたは想像し、創造することができます。",
 
-  "line4": "2. Name your project, select desired frameworks and code on the go!",
+  "line4": "2.プロジェクトに名前を付け、外出先で目的のフレームワークとコードを選択してください!",
 
-  "line5": "3. View in:",
+  "line5": "3. ビュー先:",
 
-  "selectServer": "Select Server Framework",
+  "selectServer": "サーバーフレームワークの選択",
 
-  "selectServerWarn": "Please select server framework",
+  "selectServerWarn": "サーバーフレームワークを選択してください",
 
-  "selectClient": "Select Client Framework",
+  "selectClient": "クライアントフレームワークの選択",
 
-  "selectClientWarn": "Please select client framework",
+  "selectClientWarn": "クライアントフレームワークを選択してください",
 
-  "projectName": "Enter The Title:",
+  "projectName": "タイトルを入力:",
 
-  "projectNameWarn": "Please enter the Title",
+  "projectNameWarn": "タイトルを入力してください",
 
-  "submit": "Submit"
+  "submit": "送信"
 
 }
