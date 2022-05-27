@@ -97,15 +97,25 @@ select {
   .formData {
     display: block;
   }
-  .formFooter{
-    flex-direction: grid;
-    grid-template-columns: repeat(2, 1fr);
+  .formFooter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
   }
-  .container{
+  .container {
     padding: 2.5rem 0.75rem;
   }
-  .formInternalGroup{
+  .formInternalGroup {
     align-items: center;
+  }
+  .footerText,
+  .footerSpace {
+    display: none;
+  }
+  .Inputcontrol::placeholder {
+    content: 'Enter the Title';
   }
 }
 
