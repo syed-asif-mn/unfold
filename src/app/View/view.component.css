@@ -94,11 +94,27 @@ select {
   .languageBar {
     grid-template-columns: repeat(3, 50px);
   }
+  .formData {
+    display: block;
+  }
+  .formFooter{
+    flex-direction: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .container{
+    padding: 2.5rem 0.75rem;
+  }
+  .formInternalGroup{
+    align-items: center;
+  }
 }
 
 @media only screen and (min-width: 600px) {
   .languageBar {
     grid-template-columns: repeat(6, 50px);
+  }
+  .formData{
+    display: block;
   }
 }
 
