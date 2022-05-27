@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 import * as FileSaver from 'file-saver';
+import { CommunicationService } from '../Communication/communication.service';
 import { ManagerService } from '../Manager/manager.service';
 
 @Component({
@@ -16,7 +17,8 @@ export class ViewComponent {
   constructor(
     public fb: FormBuilder,
     private translateService: TranslateService,
-    public managerService: ManagerService
+    public managerService: ManagerService,
+    public communicationService: CommunicationService
   ) {
     this.translateService.use('en');
   }
