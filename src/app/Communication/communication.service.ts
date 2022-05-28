@@ -31,23 +31,17 @@ export class CommunicationService {
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
     myHeaders.append("Cookie", "csrftoken=Ekkns2E4gRIgZ7yBCJadRbdlMyLimPXU02U1HVE8hRU61q996yILmZvDSQJJbUr7");
+    myHeaders.append("mode", "no-cors");
     
-    var raw = JSON.stringify({
-      "serverFramework": 1,
-      "clientFramework": 2,
-      "projectName": "AirBus"
-    });
-    
-    var requestOptions = {
+    fetch("https://8924-2409-4055-69d-b5f-f4ae-8473-9a06-b555.ngrok.io/api/v1/create-project",  {
       method: 'POST',
       headers: myHeaders,
-      body: raw,
+      body: data,
       redirect: 'follow'
-    };
-    
-    fetch("https://8924-2409-4055-69d-b5f-f4ae-8473-9a06-b555.ngrok.io/api/v1/create-project", requestOptions)
-      .then(response => response.text())
-      .then(result => console.log(result))
+    })
+    .then(response => response.blob())
+    .then(()=>console.log("Hi"))
+    .then(blob => FileSaver.saveAs(blob, "code.zip"))
       .catch(error => console.log('error', error));
   }
 }
