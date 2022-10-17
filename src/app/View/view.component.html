@@ -10,16 +10,6 @@
 
   <p translate>line4</p>
 
-  <p translate>line5</p>
-
-  <div class="languageBar">
-    <div *ngFor="let language of this.managerService.languages; let languageIndex = index">
-      <p class="languageButton" (click)="changeLanguage(languageIndex)">
-        {{ language }}
-      </p>
-    </div>
-  </div>
-
   <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()" class="form">
     <div class="formData">
       <div class="formInternalGroup">
@@ -420,4 +410,16 @@
       <span class="submit" type="submit" (click)="onSubmit()" translate> submit </span>
     </div>
   </form>
+
+
+<p translate>line5</p>
+
+<div class="languageBar">
+  <div *ngFor="let language of this.managerService.languages; let languageIndex = index">
+    <p class="languageButton" (click)="changeLanguage(languageIndex)">
+      {{ language }}
+    </p>
+  </div>
+</div>
+
 </div>

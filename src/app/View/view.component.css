@@ -121,6 +121,6 @@ select {
     color: white;
   }
   .languageBar {
-    grid-template-columns: repeat(12, 50px);
+    grid-template-columns: repeat(16, 50px);
   }
 }
