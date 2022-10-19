@@ -1,0 +1,10 @@
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 1.5rem;
+  text-justify: inter-cluster;
+  background-color: aquamarine;
+}

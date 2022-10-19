@@ -11,17 +11,20 @@ import { ManagerService } from '../Manager/manager.service';
 export class ViewComponent {
   project: string = '';
   isSubmitted = false;
+  language: string;
 
   constructor(
     public fb: FormBuilder,
     private translateService: TranslateService,
     public managerService: ManagerService
   ) {
-    this.translateService.use('en');
+    this.language = 'en';
+    this.translateService.use(this.language);
   }
 
   changeLanguage(index: number) {
     this.translateService.use(this.managerService.codes[index]);
+    this.language = this.managerService.codes[index];
   }
 
   registrationForm = this.fb.group({
@@ -60,10 +63,14 @@ export class ViewComponent {
     if (!this.registrationForm.valid) {
       false;
     } else {
-      this.managerService.downloadData(this.projectName.value, this.serverName.value, this.clientName.value)
-      alert(
-        `Downloading files for project: ${JSON.stringify(this.projectName.value)}`
+      this.managerService.downloadData(
+        this.projectName.value,
+        this.serverName.value,
+        this.clientName.value
       );
+      this.translateService.get('dialogText').subscribe((text: string) => {
+        alert(`${text} ${JSON.stringify(this.projectName.value)}`);
+      });
     }
   }
 }

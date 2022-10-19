@@ -25,5 +25,7 @@
 
   "projectNameWarn": "Please enter the Title",
 
-  "submit": "Submit"
+  "submit": "Submit",
+
+  "dialogText": "Sorry, Something went wrong from our end! Couldn't download files for the project: "
 }

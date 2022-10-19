@@ -25,5 +25,7 @@
 
   "projectNameWarn": "Por favor, introduzca el Título",
 
-  "submit": "Enviar"
+  "submit": "Enviar",
+
+  "dialogText": "Lo sentimos, ¡algo salió mal por nuestra parte! No se pudieron descargar archivos para el proyecto: "
 }

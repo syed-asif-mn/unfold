@@ -1,6 +1,8 @@
 .container {
-  padding: 2rem;
+  padding: 1.5rem;
   text-justify: inter-cluster;
+  height: 90vh;
+  overflow: hidden;
 }
 
 h1 {
