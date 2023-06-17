@@ -49,6 +49,7 @@ select {
   border: 0.1rem solid rgb(145, 144, 144);
   border-radius: 0.25rem;
   appearance: none;
+  font-family: var(--font);
 }
 
 .invalid {
