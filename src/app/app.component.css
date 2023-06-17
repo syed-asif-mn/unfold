@@ -6,5 +6,8 @@
 .container {
   padding: 1.5rem;
   text-justify: inter-cluster;
-  background-color: aquamarine;
+}
+
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
