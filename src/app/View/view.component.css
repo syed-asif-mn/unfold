@@ -2,7 +2,7 @@
   padding: 1.5rem;
   text-justify: inter-cluster;
   height: 90vh;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 h1 {
