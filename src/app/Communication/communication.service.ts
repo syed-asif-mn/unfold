@@ -27,21 +27,28 @@ export class CommunicationService {
     xhr.send();
   }
   
-  downloadData(data: string) {
-    var myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
-    myHeaders.append("Cookie", "csrftoken=Ekkns2E4gRIgZ7yBCJadRbdlMyLimPXU02U1HVE8hRU61q996yILmZvDSQJJbUr7");
-    myHeaders.append("mode", "no-cors");
-    
-    fetch("https://8924-2409-4055-69d-b5f-f4ae-8473-9a06-b555.ngrok.io/api/v1/create-project",  {
-      method: 'POST',
-      headers: myHeaders,
-      body: data,
-      redirect: 'follow'
-    })
-    .then(response => response.blob())
-    .then(()=>console.log("Hi"))
-    .then(blob => FileSaver.saveAs(blob, "code.zip"))
-      .catch(error => console.log('error', error));
-  }
+downloadData(data: string) {
+  const headers = new Headers();
+  headers.append("Content-Type", "application/json");
+  headers.append("Cookie", "csrftoken=Ekkns2E4gRIgZ7yBCJadRbdlMyLimPXU02U1HVE8hRU61q996yILmZvDSQJJbUr7");
+
+  fetch("https://8924-2409-4055-69d-b5f-f4ae-8473-9a06-b555.ngrok.io/api/v1/create-project", {
+    method: 'POST',
+    headers: headers,
+    body: data,
+    redirect: 'follow',
+  })
+  .then(response => {
+    if (response.ok) {
+      return response.blob();
+    } else {
+      const emptyBlob = new Blob([], { type: `{data}.zip` });
+      return Promise.resolve(emptyBlob);
+    }
+  })
+  .then(blob => FileSaver.saveAs(blob, "data.zip"))
+  .catch(() => {
+    const emptyBlob = new Blob([], { type: `{data}.zip` });
+    FileSaver.saveAs(emptyBlob, `{data}.zip`);
+  });
 }
