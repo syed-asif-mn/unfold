@@ -69,7 +69,7 @@ export class ViewComponent {
         this.clientName.value
       );
       this.translateService.get('dialogText').subscribe((text: string) => {
-        alert(`${text} ${JSON.stringify(this.projectName.value)}`);
+        alert(`${text}${JSON.stringify(this.projectName.value)}`);
       });
     }
   }
