@@ -27,5 +27,5 @@
 
   "submit": "Submit",
 
-  "dialogText": "Sorry, Something went wrong from our end! Couldn't download files for the project: "
+  "dialogText": "Downloading files for the project: "
 }

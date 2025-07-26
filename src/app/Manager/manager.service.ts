@@ -35,9 +35,8 @@ export class ManagerService {
     var data = JSON.stringify({
       serverFramework: myMap.get(serverName),
       clientFramework: myMap.get(clientName),
-      projectName: projectName,
     });
 
-    this.communicationService.downloadData(data);
+    this.communicationService.downloadData(data, projectName);
   }
 }
